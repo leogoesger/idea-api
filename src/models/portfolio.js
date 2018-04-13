@@ -8,7 +8,35 @@ module.exports = (sequelizeClient, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    portfolio: {
+    researchAndEvaluation: {
+      type: DataTypes.JSONB,
+      allowNull: true,
+    },
+    mentalHealthService: {
+      type: DataTypes.JSONB,
+      allowNull: true,
+    },
+    dataModels: {
+      type: DataTypes.JSONB,
+      allowNull: true,
+    },
+    logicModels: {
+      type: DataTypes.JSONB,
+      allowNull: true,
+    },
+    plans: {
+      type: DataTypes.JSONB,
+      allowNull: true,
+    },
+    forms: {
+      type: DataTypes.JSONB,
+      allowNull: true,
+    },
+    policiesAndProcedures: {
+      type: DataTypes.JSONB,
+      allowNull: true,
+    },
+    grants: {
       type: DataTypes.JSONB,
       allowNull: true,
     },

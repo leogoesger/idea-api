@@ -13,21 +13,19 @@ module.exports = app => {
   app.put('/api/contacts', contactsController.update);
 
   app.get('/api/contracts', contractsController.index);
-  // app.put('/api/contracts', contractsController.update);
+  app.put('/api/contracts', contractsController.update);
 
   app.get('/api/homes', homesController.index);
-  // app.put('/api/homes', homesController.update);
+  app.put('/api/homes', homesController.update);
 
   app.get('/api/members', membersController.index);
-  app.put('/api/members/:memberId', membersController.update);
-  app.delete('/api/members/:memberId', membersController.delete);
-  app.post('/api/members', membersController.create);
+  app.put('/api/members', membersController.update);
 
   app.get('/api/portfolios', portfoliosController.index);
-  // app.put('/api/portfolios', portfoliosController.index);
+  app.put('/api/portfolios', portfoliosController.update);
 
   app.get('/api/services', servicesController.index);
-  // app.put('/api/services', servicesController.index);
+  app.put('/api/services', servicesController.update);
 
   app.post('/api/login', usersController.login);
   app.get('/api/users/me', authenticate, usersController.getMe);

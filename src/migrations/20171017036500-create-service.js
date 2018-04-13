@@ -8,8 +8,12 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      service: {
-        type: Sequelize.JSONB, // eslint-disable-line
+      overviewServices: {
+        type: Sequelize.JSONB,
+        allowNull: true,
+      },
+      services: {
+        type: Sequelize.JSONB,
         allowNull: true,
       },
       createdAt: {

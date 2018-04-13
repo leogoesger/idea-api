@@ -2,9 +2,20 @@ import {Portfolio} from '../models';
 
 module.exports = {
   index(req, res) {
-    return Portfolio.findAll()
-      .then(members => {
-        res.status(200).send(members);
+    return Portfolio.findById(1, {
+      attributes: [
+        'researchAndEvaluation',
+        'mentalHealthService',
+        'dataModels',
+        'logicModels',
+        'plans',
+        'forms',
+        'policiesAndProcedures',
+        'grants',
+      ],
+    })
+      .then(portfolios => {
+        res.status(200).send(portfolios);
       })
       .catch(err => res.status(400).send(err.toString()));
   },

@@ -8,7 +8,11 @@ module.exports = (sequelizeClient, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    service: {
+    overviewServices: {
+      type: DataTypes.JSONB,
+      allowNull: true,
+    },
+    services: {
       type: DataTypes.JSONB,
       allowNull: true,
     },

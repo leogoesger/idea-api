@@ -8,16 +8,8 @@ module.exports = (sequelizeClient, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    name: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    title: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    image: {
-      type: DataTypes.TEXT,
+    member: {
+      type: DataTypes.JSONB,
       allowNull: true,
     },
   });

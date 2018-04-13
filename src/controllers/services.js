@@ -2,7 +2,9 @@ import {Service} from '../models';
 
 module.exports = {
   index(req, res) {
-    return Service.findAll()
+    return Service.findById(1, {
+      attributes: ['overviewServices', 'services'],
+    })
       .then(services => {
         res.status(200).send(services);
       })

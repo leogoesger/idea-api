@@ -8,16 +8,8 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      name: {
-        type: Sequelize.TEXT,
-        allowNull: true,
-      },
-      title: {
-        type: Sequelize.TEXT,
-        allowNull: true,
-      },
-      image: {
-        type: Sequelize.TEXT,
+      member: {
+        type: Sequelize.JSONB,
         allowNull: true,
       },
       createdAt: {

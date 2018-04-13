@@ -8,8 +8,36 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      portfolio: {
-        type: Sequelize.JSONB, // eslint-disable-line
+      researchAndEvaluation: {
+        type: Sequelize.JSONB,
+        allowNull: true,
+      },
+      mentalHealthService: {
+        type: Sequelize.JSONB,
+        allowNull: true,
+      },
+      dataModels: {
+        type: Sequelize.JSONB,
+        allowNull: true,
+      },
+      logicModels: {
+        type: Sequelize.JSONB,
+        allowNull: true,
+      },
+      plans: {
+        type: Sequelize.JSONB,
+        allowNull: true,
+      },
+      forms: {
+        type: Sequelize.JSONB,
+        allowNull: true,
+      },
+      policiesAndProcedures: {
+        type: Sequelize.JSONB,
+        allowNull: true,
+      },
+      grants: {
+        type: Sequelize.JSONB,
         allowNull: true,
       },
       createdAt: {

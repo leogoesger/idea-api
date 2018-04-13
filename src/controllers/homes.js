@@ -2,9 +2,9 @@ import {Home} from '../models';
 
 module.exports = {
   index(req, res) {
-    return Home.findAll()
+    return Home.findById(1)
       .then(homes => {
-        res.status(200).send(homes);
+        res.status(200).send(homes.home);
       })
       .catch(err => res.status(400).send(err.toString()));
   },

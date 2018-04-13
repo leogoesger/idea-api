@@ -16,10 +16,6 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: true,
     },
-    description: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
     image: {
       type: DataTypes.TEXT,
       allowNull: true,

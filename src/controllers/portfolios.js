@@ -1,8 +1,8 @@
-import {Member} from '../models';
+import {Portfolio} from '../models';
 
 module.exports = {
   index(req, res) {
-    return Member.findAll()
+    return Portfolio.findAll()
       .then(members => {
         res.status(200).send(members);
       })

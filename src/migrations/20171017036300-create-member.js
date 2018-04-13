@@ -1,38 +1,22 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Papers', {
+    return queryInterface.createTable('Members', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
+      name: {
+        type: Sequelize.TEXT,
+        allowNull: true,
+      },
       title: {
         type: Sequelize.TEXT,
         allowNull: true,
       },
-      description: {
-        type: Sequelize.TEXT,
-        allowNull: true,
-      },
-      type: {
-        type: Sequelize.ENUM,
-        values: ['HYDROLOGY', 'MORPHOLOGY', 'ECOLOGY', 'GENERAL'],
-      },
-      authors: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
-        allowNull: true,
-      },
-      imgUrl: {
-        type: Sequelize.TEXT,
-        allowNull: true,
-      },
-      publishedDate: {
-        type: Sequelize.TEXT,
-        allowNull: true,
-      },
-      paperUrl: {
+      image: {
         type: Sequelize.TEXT,
         allowNull: true,
       },
@@ -47,6 +31,6 @@ module.exports = {
     });
   },
   down: queryInterface => {
-    return queryInterface.dropTable('Papers');
+    return queryInterface.dropTable('Members');
   },
 };

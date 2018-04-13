@@ -1,7 +1,11 @@
 /* eslint-disable */
 
 module.exports = {
+  contacts: require('./contacts'),
+  contracts: require('./contracts'),
+  homes: require('./homes'),
   members: require('./members'),
-  papers: require('./papers'),
-  memberPapers: require('./memberPapers'),
+  portfolios: require('./portfolios'),
+  services: require('./services'),
+  users: require('./users'),
 };

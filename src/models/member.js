@@ -24,49 +24,6 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: true,
     },
-    location: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    website: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    linkedin: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    twitter: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    github: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    youtube: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    googleScholar: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    researchGate: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    email: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
   });
-  Member.associate = models => {
-    Member.belongsToMany(models.Paper, {
-      through: models.MemberPaper,
-      foreignKey: 'memberId',
-      as: 'papers',
-    });
-  };
   return Member;
 };

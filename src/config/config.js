@@ -7,7 +7,7 @@ module.exports = {
   development: {
     username: 'postgres',
     password: null,
-    database: 'eflow_development',
+    database: 'idea_development',
     host: '127.0.0.1',
     post: 5432,
     dialect: 'postgres',
@@ -17,7 +17,7 @@ module.exports = {
   test: {
     username: 'postgres',
     password: null,
-    database: 'eflow_test',
+    database: 'idea_test',
     host: '127.0.0.1',
     post: 5432,
     dialect: 'postgres',
@@ -27,7 +27,7 @@ module.exports = {
   production: {
     username: 'production',
     password: 'production123',
-    database: 'eflow_production',
+    database: 'idea_production',
     host: '127.0.0.1',
     post: 5432,
     dialect: 'postgres',

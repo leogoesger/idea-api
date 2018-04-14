@@ -7,6 +7,7 @@ const membersController = require('../controllers').members;
 const portfoliosController = require('../controllers').portfolios;
 const servicesController = require('../controllers').services;
 const usersController = require('../controllers').users;
+const submitController = require('../controllers').submit;
 
 module.exports = app => {
   app.get('/api/contacts', contactsController.index);
@@ -29,4 +30,6 @@ module.exports = app => {
 
   app.post('/api/login', usersController.login);
   app.get('/api/users/me', authenticate, usersController.getMe);
+
+  app.post('/api/submit', submitController.submit);
 };

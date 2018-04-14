@@ -5,6 +5,7 @@ const members = require('./members');
 const portfolios = require('./portfolios');
 const services = require('./services');
 const users = require('./users');
+const submit = require('./submit');
 
 module.exports = {
   contacts,
@@ -14,4 +15,5 @@ module.exports = {
   portfolios,
   services,
   users,
+  submit,
 };

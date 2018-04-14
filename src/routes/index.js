@@ -11,22 +11,22 @@ const submitController = require('../controllers').submit;
 
 module.exports = app => {
   app.get('/api/contacts', contactsController.index);
-  app.put('/api/contacts', contactsController.update);
+  app.put('/api/contacts', authenticate, contactsController.update);
 
   app.get('/api/contracts', contractsController.index);
-  app.put('/api/contracts', contractsController.update);
+  app.put('/api/contracts', authenticate, contractsController.update);
 
   app.get('/api/homes', homesController.index);
-  app.put('/api/homes', homesController.update);
+  app.put('/api/homes', authenticate, homesController.update);
 
   app.get('/api/members', membersController.index);
-  app.put('/api/members', membersController.update);
+  app.put('/api/members', authenticate, membersController.update);
 
   app.get('/api/portfolios', portfoliosController.index);
-  app.put('/api/portfolios', portfoliosController.update);
+  app.put('/api/portfolios', authenticate, portfoliosController.update);
 
   app.get('/api/services', servicesController.index);
-  app.put('/api/services', servicesController.update);
+  app.put('/api/services', authenticate, servicesController.update);
 
   app.post('/api/login', usersController.login);
   app.get('/api/users/me', authenticate, usersController.getMe);

@@ -1,13 +1,14 @@
 const nodemailer = require('nodemailer');
+const mg = require('nodemailer-mailgun-transport');
 
-const transporter = nodemailer.createTransport({
-  host: 'smtp.ethereal.email',
-  port: 587,
+const auth = {
   auth: {
-      user: 'ilbjbfgzew6jsf4m@ethereal.email',
-      pass: 'zTu6hYBXCG3yJgzQb3'
+    api_key: process.env.MAILGUN_API_KEY,
+    domain: process.env.MAILGUN_DOMAIN,
   }
-});
+}
+
+const nodeMailerMailgun = nodemailer.createTransport(mg(auth));
 
 module.exports = {
   submit(req, res) {
@@ -18,15 +19,15 @@ module.exports = {
     }
     let mailOptions = {
       from: `${name} <${email}>`, // sender address
-      to: 'bar@example.com, baz@example.com', // list of receivers
+      to: 'leoq91@gmail.com', // list of receivers
       subject: 'IDEA Consulting Contact Form', // Subject line
-      text: msg, // plain text body
+      text: 'Phone: ' + phone + '\n' + msg, // plain text body
     };
-    transporter.sendMail(mailOptions, (error, info) => {
+    nodeMailerMailgun.sendMail(mailOptions, (error, info) => {
       if (error) {
         return console.log(error);
       }
-      console.log('Message sent: %s', info.messageId);
+      console.log('Response: ' + info);
     })
     res.status(200).send('Form Submitted!');
   },

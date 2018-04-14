@@ -8,6 +8,7 @@ module.exports = {
       res.status(400).send('email not found');
       return;
     }
+
     User.find({
       where: {
         email: req.body.email,

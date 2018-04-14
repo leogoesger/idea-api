@@ -12,7 +12,6 @@ module.exports = {
   update(req, res) {
     return Home.findById(1)
       .then(home => {
-        console.log(req.body);
         if (!home) {
           return res.status(404).send({message: 'Home not found'});
         }

@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use((req, res, next) => {
   const allowed_header = ['http://localhost:4000', 'http://localhost:3000'];
   const origin = req.headers.origin;
-  if (allowed_header.indexOf(origin) > -1) {
+  if (allowed_header.indexOf(origin) > -1 || origin.includes('localhost')) {
     res.header('Access-Control-Allow-Origin', origin);
   }
   res.header(

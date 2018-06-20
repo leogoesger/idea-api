@@ -12,8 +12,10 @@ app.use((req, res, next) => {
     'http://localhost:4000',
     'http://localhost:3000',
     'http://www.ideaconsulting.us/',
+    'http://www.ideaconsulting.us',
     'http://ideaconsulting.us/',
     'https://www.ideaconsulting.us/',
+    'https://www.ideaconsulting.us',
     'https://ideaconsulting.us/',
   ];
   const origin = req.headers.origin;

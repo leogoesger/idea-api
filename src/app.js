@@ -8,7 +8,14 @@ app.use(logger('tiny'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use((req, res, next) => {
-  const allowed_header = ['http://localhost:4000', 'http://localhost:3000'];
+  const allowed_header = [
+    'http://localhost:4000',
+    'http://localhost:3000',
+    'http://www.ideaconsulting.us/',
+    'http://ideaconsulting.us/',
+    'https://www.ideaconsulting.us/',
+    'https://ideaconsulting.us/',
+  ];
   const origin = req.headers.origin;
   if (allowed_header.indexOf(origin) > -1) {
     res.header('Access-Control-Allow-Origin', origin);

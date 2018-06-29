@@ -5,8 +5,8 @@ const auth = {
   auth: {
     api_key: process.env.MAILGUN_API_KEY,
     domain: process.env.MAILGUN_DOMAIN,
-  }
-}
+  },
+};
 
 const nodeMailerMailgun = nodemailer.createTransport(mg(auth));
 
@@ -17,18 +17,18 @@ module.exports = {
       res.status(400).send('Invalid form');
       return;
     }
-    let mailOptions = {
+    const mailOptions = {
       from: `${name} <${email}>`, // sender address
-      to: 'leoq91@gmail.com', // list of receivers
+      to: 'ncallahan.idea@gmail.com', // list of receivers
       subject: 'IDEA Consulting Contact Form', // Subject line
       text: 'Phone: ' + phone + '\n' + msg, // plain text body
     };
     nodeMailerMailgun.sendMail(mailOptions, (error, info) => {
       if (error) {
-        return console.log(error);
+        throw error;
       }
-      console.log('Response: ' + info);
-    })
+      console.log('Response: ' + info); //eslint-disable-line
+    });
     res.status(200).send('Form Submitted!');
   },
-};  
+};

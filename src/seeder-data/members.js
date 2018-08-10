@@ -5,26 +5,16 @@ module.exports = [
       {
         name: 'Nancy M. Callahan',
         title: 'Ph.D. 20+ years of experience',
-        image: 'https://s3.amazonaws.com/37assets/svn/765-default-avatar.png',
-        description: 'This is a really really really big world!',
+        image:
+          'https://www.mcdougallinsurance.com/wp-content/uploads/2017/11/Default-Female-Head.jpg',
+        description: '',
       },
       {
         name: 'Lily M. Callahan',
-        title: 'Ph.D. 30+ years of experience',
-        image: 'https://s3.amazonaws.com/37assets/svn/765-default-avatar.png',
-        description: 'This is a really really really big world!',
-      },
-      {
-        name: 'Julia M. Callahan',
-        title: 'Ph.D. 40+ years of experience',
-        image: 'https://s3.amazonaws.com/37assets/svn/765-default-avatar.png',
-        description: 'This is a really really really big world!',
-      },
-      {
-        name: 'John M. Callahan',
-        title: 'Ph.D. 50+ years of experience',
-        image: 'https://s3.amazonaws.com/37assets/svn/765-default-avatar.png',
-        description: 'This is a really really really big world!',
+        title: 'Research Assistant',
+        image:
+          'https://www.mcdougallinsurance.com/wp-content/uploads/2017/11/Default-Female-Head.jpg',
+        description: '',
       },
     ]),
 

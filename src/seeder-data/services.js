@@ -35,7 +35,7 @@ module.exports = [
             ],
           },
           {
-            description: '2Conduct Gaps Analysis of Mental Health Services',
+            description: 'Conduct Gaps Analysis of Mental Health Services',
             url: 'https://google.com',
             subServices: [
               {name: 'Report 1', url: 'https://google.com'},

@@ -1,4 +1,3 @@
-const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 import {User} from '../models';
 
@@ -15,7 +14,7 @@ module.exports = {
       },
     })
       .then(user => {
-        if (bcrypt.compareSync(req.body.password, user.password)) {
+        if (req.body.password === user.password) {
           const ideaJWT = jwt.sign(
             {firstName: user.firstName, email: req.body.email},
             process.env.CRYPTO_KEY

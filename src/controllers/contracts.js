@@ -1,12 +1,13 @@
 import {Contract} from '../models';
 
 module.exports = {
-  index(req, res) {
-    return Contract.findById(1)
-      .then(contracts => {
-        res.status(200).send(contracts.contract);
-      })
-      .catch(err => res.status(400).send(err.toString()));
+  async index(req, res) {
+    const response = await Contract.findById(1);
+    const {countyContracts, stateContracts} = response.get({plain: true});
+    res.status(200).send({
+      countyContracts,
+      stateContracts,
+    });
   },
 
   update(req, res) {

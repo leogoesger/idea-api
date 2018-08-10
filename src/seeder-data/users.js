@@ -1,7 +1,13 @@
 module.exports = [
   {
-    email: 'test@nelly.co',
-    password: '$2a$10$B5ZpSKerxVk0KDD3bbV1MugF1LbnHJT73Grq9rc/Z8rxcRnusjnRi',
+    email: 'leo@nelly.io',
+    password: 'XdvLfy.ivHC49Kgm}E3W',
+    createdAt: '2017-11-12 19:35:54.972-08',
+    updatedAt: '2017-11-12 19:35:54.972-08',
+  },
+  {
+    email: 'ncallahan.idea@gmail.com',
+    password: '3GcbYHca3&QTAFa}y6VE',
     createdAt: '2017-11-12 19:35:54.972-08',
     updatedAt: '2017-11-12 19:35:54.972-08',
   },

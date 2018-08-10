@@ -8,7 +8,11 @@ module.exports = (sequelizeClient, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    contract: {
+    stateContracts: {
+      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
+      allowNull: true,
+    },
+    countyContracts: {
       type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
       allowNull: true,
     },

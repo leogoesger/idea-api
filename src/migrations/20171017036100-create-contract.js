@@ -8,7 +8,11 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      contract: {
+      stateContracts: {
+        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        allowNull: true,
+      },
+      countyContracts: {
         type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
         allowNull: true,
       },

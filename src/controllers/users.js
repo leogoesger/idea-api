@@ -1,3 +1,4 @@
+const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 import {User} from '../models';
 
@@ -14,15 +15,16 @@ module.exports = {
       },
     })
       .then(user => {
-        if (req.body.password === user.password) {
+        bcrypt.compare(req.body.password, user.password, (err, response) => {
+          if (err || !response) {
+            return res.status(404).send({message: 'Wrong Password!'});
+          }
           const ideaJWT = jwt.sign(
             {firstName: user.firstName, email: req.body.email},
             process.env.CRYPTO_KEY
           );
-          res.status(200).send({ideaJWT, user});
-        } else {
-          res.status(404).send({message: 'Wrong Password!'});
-        }
+          return res.status(200).send({ideaJWT, user});
+        });
       })
       .catch(() =>
         res.status(400).send({message: 'Could not find your email!'})

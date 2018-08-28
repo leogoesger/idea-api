@@ -40,6 +40,14 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.JSONB,
       allowNull: true,
     },
+    brochures: {
+      type: DataTypes.JSONB,
+      allowNull: true,
+    },
+    presentations: {
+      type: DataTypes.JSONB,
+      allowNull: true,
+    },
   });
   return Portfolio;
 };

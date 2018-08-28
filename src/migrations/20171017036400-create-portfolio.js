@@ -40,6 +40,14 @@ module.exports = {
         type: Sequelize.JSONB,
         allowNull: true,
       },
+      brochures: {
+        type: Sequelize.JSONB,
+        allowNull: true,
+      },
+      presentations: {
+        type: Sequelize.JSONB,
+        allowNull: true,
+      },
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,

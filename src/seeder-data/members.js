@@ -4,17 +4,45 @@ module.exports = [
     member: JSON.stringify([
       {
         name: 'Nancy M. Callahan',
-        title: 'Ph.D. 20+ years of experience',
-        image:
-          'https://www.mcdougallinsurance.com/wp-content/uploads/2017/11/Default-Female-Head.jpg',
+        title: 'Ph.D. Psychology',
+        image: '',
+        description: 'Ph.D. 20+ years of experience',
+      },
+      {
+        name: 'Julia Minori',
+        title: 'Research Assistant',
+        image: '',
         description: '',
       },
       {
-        name: 'Lily M. Callahan',
-        title: 'Research Assistant',
-        image:
-          'https://www.mcdougallinsurance.com/wp-content/uploads/2017/11/Default-Female-Head.jpg',
+        name: 'Joanna Guillot',
+        title: 'Project Specialist',
+        image: '',
         description: '',
+      },
+      {
+        name: 'Katherine Sorensen',
+        title: 'Ph.D. Social and Personality Psychology',
+        image: '',
+        description: '',
+      },
+      {
+        name: 'Nicole Sudyka',
+        title: 'Research Assistant',
+        image: '',
+        description: 'New Member',
+      },
+      {
+        name: 'Alyssa Chapman',
+        title: 'Research Assistant',
+        image: '',
+        description: 'New Member',
+      },
+      {
+        name: 'Kayla Ellis',
+        title: 'Research Assistant',
+        image: '',
+        description: 'New Member',
       },
     ]),
 

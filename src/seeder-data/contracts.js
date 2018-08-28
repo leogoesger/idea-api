@@ -10,7 +10,7 @@ module.exports = [
       'Washington Department of Social and Health Services',
     ],
     countyContracts: [
-      'Alpine County Behavioral Health Servives',
+      'Alpine County Behavioral Health Services',
       'Butte County Department of Employment and Social Services',
       'Butte County Behavioral Health Services',
       'Colusa County Health and Human Services',

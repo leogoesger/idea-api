@@ -12,6 +12,8 @@ module.exports = {
         'forms',
         'policiesAndProcedures',
         'grants',
+        'brochures',
+        'presentations',
       ],
     })
       .then(portfolios => {
